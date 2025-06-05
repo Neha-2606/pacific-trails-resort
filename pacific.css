@@ -1,0 +1,189 @@
+/* Reset default block-level elements */
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+    display: block;
+}
+
+/* Body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666666;
+    line-height: 1.5;
+    background-color: #00569f;
+    background-image: url('images/ptrbackground.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 200px;
+}
+
+/* Wrapper for layout */
+#wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    min-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #000033;
+    color: #ffffff;
+    background-image: url('images/sunset.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 15px 10px 10px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Navigation */
+nav {
+    width: 160px;
+    padding: 20px 10px 10px 20px;
+    font-weight: bold;
+    background-color: #add8e6;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0 0 20px 0;
+    margin: 0 0 40px 0;
+    font-size: 1.2em;
+}
+
+nav li {
+    padding: 5px 0;
+    border-bottom: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3399cc;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+nav a:visited {
+    color: #3399cc;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: #344873;
+    padding-left: 8px;
+}
+
+/* Content area */
+#content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+h1, h2 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+h2 {
+    color: #3399cc;
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+/* Resort name */
+.resort {
+    color: #000033;
+    font-weight: bold;
+}
+
+/* Lists */
+ul {
+    list-style-image: url('images/marker.gif');
+    padding-left: 25px;
+    margin: 10px 0;
+}
+
+li {
+    padding-bottom: 8px;
+}
+
+/* Image */
+img {
+    float: right;
+    margin: 0 0 20px 20px;
+    max-width: 100%;
+    width: 320px;
+}
+
+/* Contact */
+#contact {
+    font-size: 90%;
+    margin: 20px 0;
+    clear: both;
+}
+
+/* Footer (now inside wrapper) */
+footer {
+    width: 100%;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 80%;
+    font-style: italic;
+    padding: 20px;
+    text-align: left;
+    background-color: #ffffff;
+    border-top: 0;
+    clear: both;
+}
+
+footer a {
+    color: #666666;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #wrapper {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    #content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    img {
+        float: none;
+        margin: 0 auto;
+        display: block;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+    }
+}
